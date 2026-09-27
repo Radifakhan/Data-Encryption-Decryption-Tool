@@ -1,0 +1,22 @@
+AES vs RSA PERFORMANCE COMPARISON
+
+Test Environment:
+OS: Kali Linux
+Python: 3.14.7
+Cryptography Library: 50.0.1
+
+Test Message Size: 75 bytes
+
+AES-256-GCM:
+Iterations: 1000
+Total Time: 0.001179 seconds
+Average Time: 0.001179 ms
+
+RSA-2048-OAEP:
+Iterations: 100
+Total Time: 0.004022 seconds
+Average Time: 0.040221 ms
+
+Observation:
+AES-256-GCM showed a lower measured average encryption time
+than RSA-2048-OAEP in this test environment.
