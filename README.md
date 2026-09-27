@@ -1,6 +1,5 @@
 # CipherShield – Data Encryption & Decryption Tool
 
-**Name:** Radifa Khanam    
 **Project:** Data Encryption and Decryption Tool  
 **Environment:** Kali Linux  
 **Language:** Python 3.14.7  
@@ -9,14 +8,14 @@
 
 ## 1. Project Overview
 
-CipherShield is a Python-based data encryption and decryption application developed as part of the Cyber Security and Ethical Hacking.
+CipherShield is a Python-based data encryption and decryption application designed to demonstrate practical implementation of modern cryptographic techniques.
 
-The project demonstrates practical implementation of symmetric and asymmetric cryptography using:
+The project demonstrates both symmetric and asymmetric cryptography using:
 
 - AES-256-GCM
 - RSA-2048-OAEP
 
-The application supports secure message encryption/decryption and file encryption/decryption through a graphical user interface.
+The application supports secure message encryption/decryption and file encryption/decryption through a graphical user interface and command-line tools.
 
 ---
 
@@ -47,28 +46,26 @@ The main objectives of this project are:
 
 ### RSA-2048-OAEP
 
-- 2048-bit asymmetric key pair
-- Public-key encryption
-- Private-key decryption
+- 2048-bit asymmetric encryption
+- Public and private key generation
 - OAEP padding
-- SHA-256 hashing
+- Message encryption/decryption
+- Secure asymmetric cryptography demonstration
+
+### File Encryption
+
+- Encrypt files using AES-based encryption
+- Decrypt encrypted files
+- Preserve decrypted file contents
+- Verify successful encryption and decryption
 
 ### Graphical User Interface
 
-- Cybersecurity-themed interface
-- AES message encryption/decryption
-- RSA message encryption/decryption
-- File encryption
-- File decryption
-- Operation status indicator
-- Result display
-
-### Security Testing
-
-- Successful encryption/decryption testing
-- File encryption/decryption testing
-- AES-GCM tamper detection testing
-- AES vs RSA performance benchmarking
+- User-friendly Tkinter interface
+- AES encryption/decryption
+- RSA encryption/decryption
+- File encryption/decryption
+- Clear input and output sections
 
 ---
 
@@ -78,60 +75,68 @@ The main objectives of this project are:
 |---|---|
 | Python 3.14.7 | Application development |
 | Cryptography 50.0.1 | Cryptographic operations |
-| Tkinter | Graphical user interface |
 | AES-256-GCM | Symmetric encryption |
 | RSA-2048-OAEP | Asymmetric encryption |
-| SHA-256 | Cryptographic hashing |
+| Tkinter | Graphical user interface |
 | Kali Linux | Development and testing environment |
+| Git & GitHub | Version control and project hosting |
 
 ---
 
-## 5. AES-256-GCM
+## 5. Testing
 
-AES is a symmetric encryption algorithm where the same secret key is used for encryption and decryption.
+The project includes:
 
-This project uses AES-256-GCM.
+- AES encryption and decryption testing
+- RSA encryption and decryption testing
+- File encryption and decryption testing
+- AES-GCM tamper detection testing
+- AES vs RSA performance testing
 
-GCM provides authenticated encryption, which means that it provides:
+Performance results are stored in:
 
-- Confidentiality
-- Integrity
-- Authentication
-
-A unique 12-byte nonce is generated for each encryption operation.
-
----
-
-## 6. RSA-2048-OAEP
-
-RSA is an asymmetric cryptographic algorithm.
-
-It uses two keys:
-
-- Public key – used for encryption
-- Private key – used for decryption
-
-The project uses RSA-2048 with OAEP padding and SHA-256.
-
-RSA is useful for demonstrating public-key cryptography, while AES is more suitable for efficient encryption of larger amounts of data.
+`performance_results.txt`
 
 ---
 
-## 7. File Encryption
+## 6. Security
 
-The application supports AES-256-GCM file encryption.
+CipherShield demonstrates important cybersecurity concepts including:
 
-Encryption flow:
+- Data confidentiality
+- Data integrity
+- Authenticated encryption
+- Tamper detection
+- Symmetric cryptography
+- Asymmetric cryptography
+- Secure file handling
+
+---
+
+## 7. Project Structure
 
 ```text
-Input File
-    ↓
-Read Binary Data
-    ↓
-Generate Secure Nonce
-    ↓
-AES-256-GCM Encryption
-    ↓
-Nonce + Encrypted Data
-    ↓
-Encrypted .enc File
+Data-Encryption-Decryption-Tool/
+│
+├── aes_tool.py
+├── rsa_tool.py
+├── encryption_tool_gui.py
+├── file_encryption.py
+├── performance_test.py
+├── tamper_test.py
+├── performance_results.txt
+├── test_message.txt
+├── requirements.txt
+├── README.md
+│
+├── screenshots/
+│   ├── main-gui.png
+│   ├── aes-encryption.png
+│   ├── aes-decryption.png
+│   ├── rsa-encryption.png
+│   ├── rsa-decryption.png
+│   ├── file-encryption.png
+│   └── file-decryption.png
+│
+└── report/
+    └── Data encryption and decryption tool.pdf
